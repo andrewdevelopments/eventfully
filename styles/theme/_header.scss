@@ -1,0 +1,35 @@
+header {
+	position: fixed;
+	top: 30px;
+	left: 0;
+	width: 100%;
+	z-index: 1001;
+	.burger-icon {
+		position: relative;
+		display: inline-block;
+		height: 15px;
+		width: 25px;
+		&:after, &:before, span:before, span:after {
+			display: block;
+			content: '';
+			width: 5px;
+			height: 5px;
+			background: $light;
+			position: absolute;
+			left: 0;
+			@include radius(100%);
+		}
+		&:before, span:before {
+			top: 0;
+		}
+		&:after, span:after {
+			bottom: 0;
+		}
+		span:first-child:before, span:first-child:after {
+			left: 10px;
+		}
+		span:last-child:before, span:last-child:after {
+			left: 20px;
+		}
+	}
+}

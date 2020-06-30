@@ -1,0 +1,104 @@
+section {
+	padding: 120px 0;
+	&.no-spacing {
+		padding: 0;
+	}
+	&.no-top-spacing {
+		padding-top: 0;
+	}
+	&.no-bottom-spacing {
+		padding-bottom: 0;
+	}
+	.main-title {
+		margin-bottom: 80px;
+		h1 {
+			color: $theme-dark-color;
+			font-size: 46px;
+			font-weight: 700;
+			margin: 0;
+			&:after {
+				display: block;
+				content: '';
+				background: $theme-color;
+				width: 80px;
+				height: 4px;
+				margin-top: 20px;
+			}
+		}
+		p {
+			margin: 20px 0 0;
+			font-weight: 400;
+			font-size: 20px;
+			color: $theme-grey-color;
+		}
+		&.icon {
+			img {
+				display: inline-block;
+				float: left;
+				margin-right: 50px;
+			}
+			h1, p {
+				display: inline-block;
+			}
+		}
+		&.light {
+			h1 {
+				color: $light;
+			}
+			p {
+				color: $light;
+			}
+		}
+	}
+	.aligncenter {
+		.main-title {
+			h1:after {
+				margin: 20px auto auto;
+			}
+		}
+	}
+}
+.background-dark {
+	background: $theme-dark-color;
+}
+.background-light {
+	background: $light;
+	h1, h2, h3, h4, h5, h6 {
+		color: $theme-dark-color;
+	}
+}
+.background-light-dark {
+	background: #f1f1f1;
+}
+.feature {
+	text-align: center;
+	i {
+		font-size: 40px;
+		color: $theme-color;
+	}
+	h3 {
+		margin: 30px 0px 13px;
+	}
+}
+.partner {
+	margin-top: 30px;
+	cursor: pointer;
+	background: $light;
+	padding: 30px;
+	min-height: 130px;
+	text-align: center;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	@include box-shadow(0 0 10px rgba(0, 0, 0, 0.05));
+	a {
+		display: block;
+		width: 100%;
+	}
+}
+.c-3:first-child .partner, .c-3:nth-child(2) .partner, .c-3:nth-child(3) .partner, .c-3:nth-child(4) .partner, .c-4:first-child .partner, .c-4:nth-child(2) .partner, .c-4:nth-child(3) .partner {
+	margin-top: 0;
+}

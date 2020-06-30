@@ -1,0 +1,24 @@
+.align {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+}
+.aligncenter {
+	text-align: center;
+}
+.alignleft {
+	text-align: left;
+}
+.alignright {
+	text-align: right;
+}
+ul, ol {
+	&.default {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+}

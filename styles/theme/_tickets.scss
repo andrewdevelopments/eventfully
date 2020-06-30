@@ -1,0 +1,43 @@
+.pricing-plan {
+	padding: 30px;
+	background: $light;
+	cursor: pointer;
+	@include radius(10px);
+	@include box-shadow(0 0 15px rgba(0, 0, 0, 0.05));
+	.price-head {
+		display: inline-block;
+		width: 100%;
+		margin-bottom: 10px;
+		h3 {
+			color: $theme-dark-color;
+			display: inline-block;
+			float: left;
+			margin: 0;
+			line-height: normal;
+		}
+		.price-value {
+			display: inline-block;
+			float: right;
+			span {
+				font-size: 30px;
+				color: $theme-color;
+				font-family: $buttons-font;
+				font-weight: 700;
+				line-height: normal;
+			}
+		}
+	}
+	.price-body {
+		clear: both;
+		p {
+			margin: 0;
+		}
+	}
+}
+.form-body {
+	padding: 30px;
+	margin-top: 30px;
+	background: $light;
+	@include radius(10px);
+	@include box-shadow(0 0 15px rgba(0, 0, 0, 0.05));
+}

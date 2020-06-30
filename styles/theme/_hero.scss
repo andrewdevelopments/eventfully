@@ -1,0 +1,169 @@
+.fullscreen {
+	background:url(../images/main_creative.jpg) no-repeat center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	.fullscreen-content {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		z-index: 1;
+		@include transform(translateY(-50%));
+		.event-title {
+			margin-bottom: 30px;
+			h1 {
+				font-weight: 600;
+				font-size: 70px;
+				line-height: 70px;
+			}
+			&:after {
+				display: block;
+				content: '';
+				width: 170px;
+				height: 5px;
+				background: $theme-color;
+				margin-top: 30px;
+			}
+		}
+		.event-date {
+			h2 {
+				font-size: 36px;
+				font-weight: 600;
+			}
+		}
+		.event-location {
+			margin-bottom: 40px;
+			i {
+				margin-right: 15px;
+				font-size: 35px;
+				color: #fff;
+			}
+			span {
+				font-size: 24px;
+				color: $light;
+			}
+		}
+		.speakers {
+			margin-bottom: 40px;
+		}
+	}
+	&:after {
+		display: block;
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 50%;
+		z-index: 0;
+		background: $theme-dark-color;
+		opacity: 0.8;
+		-khtml-opacity: 0.8;
+		-moz-opacity: 0.8;
+		-ms-filter:"alpha(opacity=80)";
+		filter:alpha(opacity=80);
+	}
+	.fullscreen-expand {
+		width: 80px;
+		height: 80px;
+		position: absolute;
+		bottom: 40px;
+		left: 50%;
+		z-index: 1;
+		@include transform(translateX(-50%));
+		&:after, &:before {
+			display: block;
+			content: '';
+			position: absolute;
+			height: 5px;
+			background: $theme-color;
+		}
+		&:after {
+			width: 100%;
+			height: 5px;
+			top: 50%;
+			left: 0;
+			@include transform(translateY(-50%));
+		}
+		&:before {
+			height: 100%;
+			width: 5px;
+			left: 50%;
+			top: 0;
+			@include transform(translateX(-50%));
+		}
+	}
+}
+.hero {
+	background:url(../images/main_onepage.jpg) no-repeat center;
+	position: relative;
+	width: 100%;
+	.hero-content {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		z-index: 1;
+		@include transform(translateY(-50%));
+		.event-title {
+			margin-bottom: 30px;
+			h1 {
+				font-weight: 600;
+				font-size: 70px;
+				line-height: 70px;
+			}
+		}
+		.event-date {
+			h2 {
+				font-size: 36px;
+				font-weight: 600;
+			}
+			&:after {
+				display: block;
+				content: '';
+				width: 170px;
+				height: 5px;
+				background: $theme-color;
+				margin: 30px auto;
+			}
+		}
+		.event-location {
+			margin-bottom: 40px;
+			i {
+				margin-right: 15px;
+				font-size: 35px;
+				color: #fff;
+			}
+			span {
+				font-size: 24px;
+				color: $light;
+			}
+		}
+	}
+	.hero-information {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		.container {
+			background: $theme-dark-color;
+			padding: 30px;
+			.countdown {
+				margin: 0;
+			}
+			h1, h2, h3, h4, h5, h6 {
+				font-weight: 700;
+				margin: 0;
+			}
+			.c-3 p {
+				font-size: 14px;
+				font-weight: 700;
+				font-family: $buttons-font;
+				margin: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,205 @@
+a {
+	color: $theme-color;
+	font-weight: 700;
+	&.link {
+		text-transform: uppercase;
+	}
+	&:hover, &:focus, &:active {
+		color: $theme-dark-color;
+	}
+}
+a, button, input, select, textarea {
+	text-decoration: none;
+	font-family: $buttons-font;
+	outline: 0;
+	border: none;
+	@include transition(all 200ms);
+}
+.btn {
+	background: $theme-color;
+	color: $light;
+	font-size: $button-size;
+	text-transform: uppercase;
+	padding: 11px 40px;
+	display: inline-block;
+	font-weight: 700;
+	@include radius(5px);
+	&.dark {
+		background: $theme-dark-color;
+	}
+	&.radius {
+		@include radius(50px);
+	}
+	&.link {
+		background: none;
+		padding: 0;
+		font-size: 12px;
+		font-weight: 500;
+		letter-spacing: 1px;
+		color: $theme-color;
+		i {
+			color: $theme-color;
+			margin-left: 10px;
+		}
+		&:hover {
+			color: $theme-grey-color;
+			background: none;
+		}
+	}
+	&.large {
+		width: 100%;
+		padding: 14px 25px;
+	}
+	&:hover, &:focus, &:active {
+		background: $theme-grey-color;
+		color: $light;
+	}
+}
+button.btn, input[type="submit"] {
+	@include radius(10px);
+}
+
+.social-links, .social-buttons {
+	a {
+		color: $light;
+		width: 50px;
+		height: 50px;
+		text-align: center;
+		line-height: 52px;
+		margin: 0 15px;
+		font-size: 30px;
+		&:first-child {
+			margin-left: 0;
+		}
+		&:hover {
+			&.fa-facebook, &.fa-facebook-square, &.fa-facebook-f, &.fa-facebook-official {
+				color: $facebook;
+			}
+			&.fa-twitter, &.fa-twitter-square {
+				color: $twitter;
+			}
+			&.fa-google, &.fa-google-plus, &.fa-google-plus-square {
+				color: $google;
+			}
+			&.fa-pinterest, &.fa-pinterest-p, &.fa-pinterest-square {
+				color: $pinterest;
+			}
+			&.fa-skype {
+				color: $skype;
+			}
+			&.fa-rss, &.fa-rss-square {
+				color: $rss;
+			}
+			&.fa-linkedin, &.fa-linkedin-square {
+				color: $linkedin;
+			}
+			&.fa-youtube, &.fa-youtube-play, &.fa-youtube-square {
+				color: $youtube;
+			}
+		}
+	}
+}
+.social-buttons {
+	a {
+		color: $black;
+		font-size: 18px;
+		margin: 0 5px;
+		@include radius(5px);
+		&:hover {
+			&.fa-facebook, &.fa-facebook-square, &.fa-facebook-f, &.fa-facebook-official {
+				background: $facebook;
+			}
+			&.fa-twitter, &.fa-twitter-square {
+				background: $twitter;
+			}
+			&.fa-google, &.fa-google-plus, &.fa-google-plus-square {
+				background: $google;
+			}
+			&.fa-pinterest, &.fa-pinterest-p, &.fa-pinterest-square {
+				background: $pinterest;
+			}
+			&.fa-skype {
+				background: $skype;
+			}
+			&.fa-rss, &.fa-rss-square {
+				background: $rss;
+			}
+			&.fa-linkedin, &.fa-linkedin-square {
+				background: $linkedin;
+			}
+			&.fa-youtube, &.fa-youtube-play, &.fa-youtube-square {
+				background: $youtube;
+			}
+			color: $light !important;
+		}
+	}
+}
+.post-media {
+	.social-links {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		z-index: 1;
+		@include transform(translateY(-50%));
+		a {
+			color: $theme-grey-color;
+			background: $light;
+			margin: 0 5px;
+			font-size: 18px;
+			visibility: hidden;
+			@include opacity(0);
+			@include radius(5px);
+			@include transform(scale(0.7));
+			&:hover {
+				background: $theme-grey-color;
+				color: $light;
+			}
+			&.fa-facebook:hover, &.fa-facebook-square:hover, &.fa-facebook-f:hover, &.fa-facebook-official:hover {
+				background: $facebook;
+			}
+			&.fa-twitter:hover, &.fa-twitter-square:hover {
+				background: $twitter;
+			}
+			&.fa-google:hover, &.fa-google-plus:hover, &.fa-google-plus-square:hover {
+				background: $google;
+			}
+			&.fa-pinterest:hover, &.fa-pinterest-p:hover, &.fa-pinterest-square:hover {
+				background: $pinterest;
+			}
+			&.fa-skype:hover {
+				background: $skype;
+			}
+			&.fa-rss:hover, &.fa-rss-square:hover {
+				background: $rss;
+			}
+			&.fa-linkedin:hover, &.fa-linkedin-square:hover {
+				background: $linkedin;
+			}
+			&.fa-youtube:hover, &.fa-youtube-play:hover, &.fa-youtube-square:hover {
+				background: $youtube;
+			}
+		}
+	}
+	&:hover {
+		a {
+			visibility: visible;
+			@include opacity(1);
+			@include transform(scale(1));
+		}
+	}
+}
+.post-share {
+	span {
+		color: $theme-grey-color;
+		font-size: 16px;
+	}
+	a {
+		color: $black;
+		margin: 0 8px;
+		&:hover {
+			color: $theme-color;
+		}
+	}
+}
